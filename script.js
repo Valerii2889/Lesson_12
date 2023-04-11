@@ -1,293 +1,174 @@
+// const button = document.querySelector(".js-click");
+// const container = document.querySelector(".js-container");
+// container.addEventListener("click", onClick);
+
+// let step = 0;
+
+// function onClick(evt) {
+//   step += 5;
+//   container.style.marginLeft = `${step}px`;
+//   container.style.marginTop = `${step}px`;
+// //   console.log(evt.currentTarget);
+// }
+// const arr = ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Non necessitatibus odit mollitia debitis tenetur, ratione, voluptatem facilis fugiat vero dicta illo assumenda et ', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non necessitatibus odit mollitia debitis tenetur, ratione, voluptatem facilis fugiat vero']
 // const title = document.querySelector(".js-title");
-// const list = document.querySelector(".js-list");
-// console.dir(list.children);
-// console.log([...list.children]);
-// console.dir(title.textContent);
-// title.textContent = "Hello JS";
+// const title1 = document.querySelector(".js-title1");
+// const title2 = document.querySelector(".js-title2");
+// title.addEventListener("click", onClick);
+// title1.addEventListener("click", onClick);
+// title2.addEventListener("click", onClick);
 
-// console.dir(title.dataset.goods);
+// const maxLength = 13;
+// const totalLength = maxLength + 3;
 
-// ClassList
-// title.classList.add("title-color");
-// title.classList.remove("title-color");
-// title.classList.toggle("title-color");
-// title.classList.toggle("title-color");
-// title.classList.toggle("title-color");
-// title.classList.toggle("title-color");
+// function onClick(evt) {
+//   const title = evt.currentTarget;
+//   const str = title.textContent.slice(0, maxLength);
 
-// title.style.fontSize = "50px";
-// title.style.color = "green";
-// title.hidden = false;
-// title.hidden = true;
-// title.hidden = false;
-// console.dir(title.getAttribute('data-goods'));
-// title.removeAttribute('hidden')
-// title.setAttribute('hidden', 'false')
+//   if (title.textContent.length > totalLength) {
+//     const remainder = title.textContent.slice(maxLength);
+//     title.setAttribute("data-title", remainder);
+//     title.textContent = str + "...";
+//   } else {
+//     const remainder = title.dataset['title'];
+//     console.log(title.dataset['title']);
+//     console.log(title.dataset.title);
+//     if (remainder) {
+//       title.textContent = str + remainder;
+//     }
+//     // getAttribute
+//   }
+// }
 
-// const li = document.createElement("li");
-// li.textContent = list.children.length + 1;
-// li.classList.add("title-color");
-// li.dataset.id = "12234";
-// const div = document.createElement('div');
-// const h2 = document.createElement('h2')
-// h2.textContent='Hello'
-// li.append(div)
-// div.append(h2)
-// list.append(li)
-// console.log(li);
+// const userName = document.querySelector('.js-input');
 
-// const li = `<li class="title-color" data-id='123'>${list.children.length + 1}
-// <div>
-// <h2>Hello</h2>
-// </div>
-// </li>`;
-// list.insertAdjacentHTML("beforeend", li);
+// userName.addEventListener('change', onInput);
+// //userName.addEventListener('input', onInput)
 
-// const listStatic = document.querySelectorAll('li');
-// const listDynamics = document.getElementsByTagName('li');
-// const list = document.querySelector(".js-list");
+// function onInput(evt){
+//     console.dir(evt.currentTarget.value);
+// }
 
-// const li = document.createElement('li');
-// li.textContent = list.children.length + 1;
-// list.append(li)
-// const li2 = document.createElement('li');
-// li2.textContent = list.children.length + 1;
-// list.append(li2)
+// const formEl = document.querySelector(".js-form");
+// formEl.addEventListener("submit", onSubmit);
 
-// console.log('listStatic',listStatic);
-// console.log('listDynamics',listDynamics);
+// function onSubmit(evt) {
+//   evt.preventDefault();
 
-// Перерва до 21.10
+//   const { userAge, userEmail, userName } = evt.currentTarget.elements;
 
+//   const data = {
+//     name: userName.value,
+//     email: userEmail.value,
+//     age: userAge.value,
+//   };
+
+//   console.log(data);
+// }
+
+// const container = document.querySelector(".js-container");
+// window.addEventListener("keydown", onKey);
+
+// function onKey(evt) {
+//   console.log(evt);
+//   // if(evt.code === 'Escape' || evt.code === 'Enter'){
+//   //     container.classList.toggle('tog')
+//   // }
+
+//   if (evt.ctrlKey && (evt.code === "KeyC")) {
+//     console.log('try copy');
+//     evt.preventDefault()
+//     // alert("Копіюєш?");
+//     return;
+//   }
+// }
+
+// Перерва до 22.10
 // const cars = [
 //   {
-//     model: "Honda",
+//     id: 1,
+//     car: "Honda",
 //     type: "Civic",
 //     price: 12000,
 //     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU",
 //   },
 //   {
-//     model: "Audi",
+//     id: 2,
+//     car: "Audi",
 //     type: "Q7",
 //     price: 40000,
 //     img: "https://upload.wikimedia.org/wikipedia/commons/8/8b/2017_Audi_Q7_S_Line_Quattro_3.0_Front.jpg",
 //   },
 //   {
-//     model: "BMW",
+//     id: 33,
+//     car: "BMW",
 //     type: "5 siries",
 //     price: 9000,
 //     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH96e58ynLO8SXMsFTNYkJci79eAZ8CyqcZsZ8snvzz2sfLl3Ojd1BQoaWBcrMKWvSYc&usqp=CAU",
 //   },
 //   {
-//     model: "Honda",
+//     id: 3,
+//     car: "Honda",
 //     type: "Accord",
 //     price: 20000,
-//     img: "https://upload.wikimedia.org/wikipedia/commons/7/76/2021_Honda_Accord_Sport_%28facelift%29%2C_front_11.30.21.jpg",
-//   },
-//   {
-//     model: "Volvo",
-//     type: "XC60",
-//     price: 7000,
-//     img: "https://www.volvocars.com/media/shared-assets/master/images/pages/my19/xc60-my19/accessories/xc60my19_accessories_exteriorfeature2_1.jpg?w=320",
-//   },
-//   {
-//     model: "Honda",
-//     type: "Civic",
-//     price: 12000,
-//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU",
-//   },
-//   {
-//     model: "Audi",
-//     type: "Q7",
-//     price: 40000,
-//     img: "https://upload.wikimedia.org/wikipedia/commons/8/8b/2017_Audi_Q7_S_Line_Quattro_3.0_Front.jpg",
-//   },
-//   {
-//     model: "BMW",
-//     type: "5 siries",
-//     price: 9000,
-//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH96e58ynLO8SXMsFTNYkJci79eAZ8CyqcZsZ8snvzz2sfLl3Ojd1BQoaWBcrMKWvSYc&usqp=CAU",
-//   },
-//   {
-//     model: "Honda",
-//     type: "Accord",
-//     price: 20000,
-//     img: "https://upload.wikimedia.org/wikipedia/commons/7/76/2021_Honda_Accord_Sport_%28facelift%29%2C_front_11.30.21.jpg",
-//   },
-//   {
-//     model: "Volvo",
-//     type: "XC60",
-//     price: 7000,
-//     img: "https://www.volvocars.com/media/shared-assets/master/images/pages/my19/xc60-my19/accessories/xc60my19_accessories_exteriorfeature2_1.jpg?w=320",
-//   },
-//   {
-//     model: "Honda",
-//     type: "Civic",
-//     price: 12000,
-//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU",
-//   },
-//   {
-//     model: "Audi",
-//     type: "Q7",
-//     price: 40000,
-//     img: "https://upload.wikimedia.org/wikipedia/commons/8/8b/2017_Audi_Q7_S_Line_Quattro_3.0_Front.jpg",
-//   },
-//   {
-//     model: "BMW",
-//     type: "5 siries",
-//     price: 9000,
-//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH96e58ynLO8SXMsFTNYkJci79eAZ8CyqcZsZ8snvzz2sfLl3Ojd1BQoaWBcrMKWvSYc&usqp=CAU",
-//   },
-//   {
-//     model: "Honda",
-//     type: "Accord",
-//     price: 20000,
-//     img: "https://upload.wikimedia.org/wikipedia/commons/7/76/2021_Honda_Accord_Sport_%28facelift%29%2C_front_11.30.21.jpg",
-//   },
-//   {
-//     model: "Volvo",
-//     type: "XC60",
-//     price: 7000,
-//     img: "https://www.volvocars.com/media/shared-assets/master/images/pages/my19/xc60-my19/accessories/xc60my19_accessories_exteriorfeature2_1.jpg?w=320",
-//   },
-//   {
-//     model: "Honda",
-//     type: "Civic",
-//     price: 12000,
-//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU",
-//   },
-//   {
-//     model: "Audi",
-//     type: "Q7",
-//     price: 40000,
-//     img: "https://upload.wikimedia.org/wikipedia/commons/8/8b/2017_Audi_Q7_S_Line_Quattro_3.0_Front.jpg",
-//   },
-//   {
-//     model: "BMW",
-//     type: "5 siries",
-//     price: 9000,
-//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH96e58ynLO8SXMsFTNYkJci79eAZ8CyqcZsZ8snvzz2sfLl3Ojd1BQoaWBcrMKWvSYc&usqp=CAU",
-//   },
-//   {
-//     model: "Honda",
-//     type: "Accord",
-//     price: 20000,
-//     img: "https://upload.wikimedia.org/wikipedia/commons/7/76/2021_Honda_Accord_Sport_%28facelift%29%2C_front_11.30.21.jpg",
-//   },
-//   {
-//     model: "Volvo",
-//     type: "XC60",
-//     price: 7000,
-//     img: "https://www.volvocars.com/media/shared-assets/master/images/pages/my19/xc60-my19/accessories/xc60my19_accessories_exteriorfeature2_1.jpg?w=320",
-//   },
-//   {
-//     model: "Honda",
-//     type: "Civic",
-//     price: 12000,
-//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU",
-//   },
-//   {
-//     model: "Audi",
-//     type: "Q7",
-//     price: 40000,
-//     img: "https://upload.wikimedia.org/wikipedia/commons/8/8b/2017_Audi_Q7_S_Line_Quattro_3.0_Front.jpg",
-//   },
-//   {
-//     model: "BMW",
-//     type: "5 siries",
-//     price: 9000,
-//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH96e58ynLO8SXMsFTNYkJci79eAZ8CyqcZsZ8snvzz2sfLl3Ojd1BQoaWBcrMKWvSYc&usqp=CAU",
-//   },
-//   {
-//     model: "Honda",
-//     type: "Accord",
-//     price: 20000,
-//     img: "https://upload.wikimedia.org/wikipedia/commons/7/76/2021_Honda_Accord_Sport_%28facelift%29%2C_front_11.30.21.jpg",
-//   },
-//   {
-//     model: "Volvo",
-//     type: "XC60",
-//     price: 7000,
-//     img: "https://www.volvocars.com/media/shared-assets/master/images/pages/my19/xc60-my19/accessories/xc60my19_accessories_exteriorfeature2_1.jpg?w=320",
-//   },
-//   {
-//     model: "Honda",
-//     type: "Civic",
-//     price: 12000,
-//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU",
-//   },
-//   {
-//     model: "Audi",
-//     type: "Q7",
-//     price: 40000,
-//     img: "https://upload.wikimedia.org/wikipedia/commons/8/8b/2017_Audi_Q7_S_Line_Quattro_3.0_Front.jpg",
-//   },
-//   {
-//     model: "BMW",
-//     type: "5 siries",
-//     price: 9000,
-//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH96e58ynLO8SXMsFTNYkJci79eAZ8CyqcZsZ8snvzz2sfLl3Ojd1BQoaWBcrMKWvSYc&usqp=CAU",
-//   },
-//   {
-//     model: "Honda",
-//     type: "Accord",
-//     price: 20000,
+//     number: "+380000000000",
 //     img: "https://upload.wikimedia.org/wikipedia/commons/7/76/2021_Honda_Accord_Sport_%28facelift%29%2C_front_11.30.21.jpg",
 //   },
 //   {
 //     id: 4,
-//     model: "Volvo",
+//     car: "Volvo",
 //     type: "XC60",
 //     price: 7000,
 //     img: "https://www.volvocars.com/media/shared-assets/master/images/pages/my19/xc60-my19/accessories/xc60my19_accessories_exteriorfeature2_1.jpg?w=320",
 //   },
 // ];
+// const list = document.querySelector(".js-list");
+// const favoriteList = document.querySelector(".js-favorite-list");
+// const form = document.querySelector(".js-search-form");
+// form.addEventListener("submit", onSearch);
+// list.addEventListener("click", onClick);
+// function createMarkup(arr) {
+//   return arr
+//     .map(
+//       ({ id, car, type, price, img }) => `
+//   <li data-id="${id}">
 
-// const container = document.querySelector(".js-container");
-// const markup = cars
-//   .map(
-//     ({ id = "none", model, type, price, img }) => `<li data-id="${id}">
-//     <img src="${img}" alt="${model}" class="img">
-//     <h2>Марка - ${model}</h2>
-//     <h3>Модель - ${type}</h3>
-//     <p>Ціна - ${price}</p>
-// </li>`
-//   )
-//   .join("");
+//       <img src="${img}" alt="${car}" width="300">
+//       <div class="js-favorite">★</div>
+//       <h2>${car}</h2>
+//       <h3>${type}</h3>
+//       <p>${price}</p>
+//   </li>`
+//     )
+//     .join("");
+// }
+// list.insertAdjacentHTML("beforeend", createMarkup(cars));
 
-// container.insertAdjacentHTML("beforeend", markup);
-// const containerAfter = document.querySelector(".js-container");
-// [...containerAfter.children].forEach((item) => {
-//   if (item.dataset.id !== "none") {
-//     item.remove();
+// function onSearch(evt) {
+//   evt.preventDefault();
+
+//   const form = evt.currentTarget;
+//   const { query, select } = form.elements;
+//   const selectValue = select.value;
+//   const searchCars = cars.filter(
+//     (
+//       item //car || type
+//     ) => item[selectValue].toLowerCase() === query.value.trim().toLowerCase()
+//   );
+//   list.innerHTML = createMarkup(searchCars);
+// }
+
+// function onClick(evt) {
+//   if (evt.target.classList.contains("js-favorite")) {
+//     evt.target.classList.add("js-favorite-active");
+
+//     const { id } = evt.target.closest("li").dataset;
+
+//     const {car, type} = cars.find(({ id: carId }) => carId === Number(id));
+//     addFavorite(`${car} ${type}`)
 //   }
-// });
+// }
 
-// console.log(result);
-// containerAfter.innerHTML = ''
-
-// const message = document.querySelector("#message");
-// console.log(message.value); // Default textarea message
-
-// //===================================================
-// const activeLink = document.querySelector(".btn.active");
-// console.log(activeLink.href); // https://s.codepen.io/about
-
-// //===================================================
-// const image = document.querySelector(".image");
-// console.log(image.src); // https://placeimg.com/640/480/animals
-// image.src = 'https://placeimg.com/640/480/tech';const dishes = document.querySelectorAll(".dishes > li");
-// dishes.forEach((dish) => {
-//     console.log(dish.dataset.id);
-//   });  У конспекті "data-атрибути" в прикладі чому ".dishes менше li"(".dishes > li"), чому не дорівнює або просто ".dishes" без "li"?
-
-// const dishes = document.querySelectorAll(".dishes > li");
-// dishes.forEach((dish) => {
-//   console.log(dish);
-// });
-
-
-
-// const list = document.querySelector('.js-list')
-// console.dir(list.firstChild);
-// console.dir(list.firstElementChild);
+// function addFavorite(currentCar) {
+//     favoriteList.insertAdjacentHTML('beforeend', `<li>${currentCar}</li>`)
+// }
